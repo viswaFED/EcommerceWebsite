@@ -1,0 +1,67 @@
+.product {
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+  font-weight: 1000;
+}
+.Product__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+.product__title{
+  text-align: center;
+  padding: 15px;
+  margin: 10px;
+}
+
+.image__container{
+  display: inline-block;
+  overflow: hidden;
+}
+
+.image__container img{
+  display: block;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.image__container :hover{
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.product__price{
+  margin: 10px 0;
+  
+}
+.product__price__text {
+  float: left;
+}
+
+.Product__button {
+  float: right;
+  color: white;
+  display: flex;
+  border-radius: 4px;
+  background: #56ccf2;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  border: none;
+}
+.Product__button:hover {
+  transition: all 0.2s ease-in-out;
+  background: rgb(56, 131, 150);
+  color: white;
+  border: none;
+}
+
+.product__header{
+    font-family: "Metal Mania";
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+}
