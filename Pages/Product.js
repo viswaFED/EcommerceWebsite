@@ -53,10 +53,12 @@ const AvaiableProducts =()=>{
   ))
 
 return(<Fragment>
+    <section>
+    <h2 className="product__header">Music</h2>
     <div>
-    <h3 className="product">Music</h3>
        <ul className="Product__container">{productsList}</ul>
-    </div>
+       </div>
+    </section>
 </Fragment>
 )}
 

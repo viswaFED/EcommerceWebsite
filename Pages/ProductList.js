@@ -6,7 +6,6 @@ const ProductList = (props) => {
     <Fragment>
       <ul>
         <div className="product__title">
-  
           <h4> {props.title} </h4>
         </div>
         <div  className="image__container">

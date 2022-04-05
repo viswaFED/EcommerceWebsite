@@ -1,22 +1,10 @@
 import React, { Fragment } from "react";
-import Footer from "./Footer";
+import AvaiableProducts from "./Product";
 
 const Store = () => {
   return (
     <Fragment>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "90vh",
-        }}
-      >
-        <h1>Store</h1>
-      </div>
-      <div>
-        <Footer />
-      </div>
+      <AvaiableProducts/>
     </Fragment>
   );
 };

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
 .product {
   padding: 15px;
   margin: 10px;
@@ -7,8 +9,12 @@
 .Product__container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: space-around;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 .product__title{
   text-align: center;
