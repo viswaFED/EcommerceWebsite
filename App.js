@@ -12,12 +12,14 @@ import Footer from "./Pages/Footer";
 
 function App() {
   const [cart, setCart] = useState(false);
+
   const hideCartHandler = () => {
     setCart(false);
   };
   const showCartHandler = () => {
     setCart(true);
   };
+
   return (
     <CartProvider>
       <Router>
@@ -27,12 +29,11 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/Store" element={<Store />} />
-          
         </Routes>
       </Router>
       {cart && <Cart onClick={hideCartHandler} />}
       <div>
-        <Footer/>
+        <Footer />
       </div>
     </CartProvider>
   );

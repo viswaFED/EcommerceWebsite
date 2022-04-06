@@ -1,12 +1,19 @@
 import React, { Fragment } from "react";
 import "./Index.css";
-import AvaiableProducts from "./Product"
 
 const Home = () => {
   return (
     <Fragment>
-      <AvaiableProducts/>
-  
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "90vh",
+        }}
+      >
+        <h1>Home Page</h1>
+      </div>
     </Fragment>
   );
 };

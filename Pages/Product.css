@@ -19,7 +19,10 @@
 .product__title{
   text-align: center;
   padding: 15px;
-  margin: 10px;
+  width: 100%;
+  font-size: 24px;
+  color: #333;
+ 
 }
 
 .image__container{

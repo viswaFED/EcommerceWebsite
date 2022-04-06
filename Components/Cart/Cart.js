@@ -1,76 +1,87 @@
-import React, { Fragment } from "react";
+import React, { useContext } from "react";
 import CartItems from "./CartItems";
+import CartContext from "./CartContext";
 import "./Cart.css";
 
-const cartElements = [
-  {
-    title: "Colors",
+// const cartElements = [
+//   {
+//     title: "Colors",
 
-    price: 100,
+//     price: 100,
 
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
+//     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
 
-    quantity: 2,
-  },
+//     quantity: 2,
+//   },
 
-  {
-    title: "Black and white Colors",
+//   {
+//     title: "Black and white Colors",
 
-    price: 50,
+//     price: 50,
 
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
+//     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
 
-    quantity: 3,
-  },
+//     quantity: 3,
+//   },
 
-  {
-    title: "Yellow and Black Colors",
+//   {
+//     title: "Yellow and Black Colors",
 
-    price: 70,
+//     price: 70,
 
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
+//     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
 
-    quantity: 1,
-  },
-];
+//     quantity: 1,
+//   },
+// ];
 
 const Cart = (props) => {
-  const Cartlist = cartElements.map((List) => (
+  let cartTotal = 0;
+  const cartCntxt = useContext(CartContext);
+  console.log(cartCntxt.items);
+
+  const CartList = cartCntxt.items.map((List) => (
     <CartItems
+      key={List.id}
+      id={List.id}
       item={List.title}
-      img={List.imageUrl}
+      img={List.imgsrc}
       price={List.price}
-      amount={List.quantity}
+      quantity={List.quantity}
     />
   ));
+  cartCntxt.items.forEach((item) => {
+    let subtotal = 0;
+    subtotal = Number(item.quantity) * Number(item.price);
+    cartTotal = cartTotal + subtotal;
+  });
 
   return (
-    <Fragment>
-      <div className="cart">
-        <h3 className="cartName">Cart</h3>
-        <button className="cart__Button" onClick={props.onClick}>
-          X
-        </button>
-        <div className="cart-row cart-header">
-          <span class="cart-item cart-column">ITEM</span>
-          <span class="cart-price cart-column">PRICE</span>
-          <span class="cart-quantity cart-column">QUANTITY</span>
-        </div>
-        <div>{Cartlist}</div>
-        <div class="cart-total">
-          <span>
-            <span class="total-title">
-              {" "}
-              <strong>Total</strong>
-            </span>
-            $<span id="total-value">0</span>
-          </span>
-        </div>
-        <button class="purchase-btn" type="button">
-          PURCHASE
-        </button>
+    <div className="cart">
+      <h3 className="cartName">Cart</h3>
+      <button className="cart__Button" onClick={props.onClick}>
+        X
+      </button>
+      <div className="cart-row cart-header">
+        <span class="cart-item cart-column">ITEM</span>
+        <span class="cart-price cart-column">PRICE</span>
+        <span class="cart-quantity cart-column">QUANTITY</span>
       </div>
-    </Fragment>
+      <div>{CartList}</div>
+      <div class="cart-total">
+        <span>
+          <span class="total-title">
+            <strong style={{ fontFamily: "Times New Roman" }}>Total</strong>
+          </span>
+          <span id="total-value" className="total--value">
+            {cartTotal}
+          </span>
+        </span>
+      </div>
+      <button class="purchase-btn" type="button">
+        PURCHASE
+      </button>
+    </div>
   );
 };
 

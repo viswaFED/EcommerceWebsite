@@ -1,20 +1,11 @@
-import React, { Fragment } from "react";
-import Footer from "./Footer";
-
+import React from "react";
+import "./About.css"
 const About = () => {
   return (
-    <Fragment>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "90vh",
-        }}
-      >
-        <h1>About</h1>
-      </div>
-    </Fragment>
+    <div className="about">
+      <h2 className="header">About</h2>
+      
+    </div>
   );
 };
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
 .footer {
   display: flex;
   margin-top: 40px;
@@ -13,6 +15,7 @@
   font-size: 50px;
   font-weight: bold;
   margin: 0 auto;
+  font-family: 'Times New Roman', Times, serif;
 }
 * {
   box-sizing: border-box;

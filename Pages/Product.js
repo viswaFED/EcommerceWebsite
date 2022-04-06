@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
+import React from "react";
 import ProductList from "./ProductList";
-import "./Product.css"
+import "./Product.css";
 
 const productsArr = [
   {
@@ -38,29 +38,27 @@ const productsArr = [
 
     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%204.png",
   },
-  
 ];
 
-const AvaiableProducts =()=>{
-  const productsList= productsArr.map(product=>(
+const AvaiableProducts = () => {
+  const productsList = productsArr.map((product) => (
     <ProductList
-    id={product.id}
-    key= {product.id}
-    title= {product.title}
-    img={product.imageUrl}
-    price={product.price}
+      id={product.id}
+      key={product.id}
+      title={product.title}
+      img={product.imageUrl}
+      price={product.price}
     />
-  ))
+  ));
 
-return(<Fragment>
+  return (
     <section>
-    <h2 className="product__header">Music</h2>
-    <div>
-       <ul className="Product__container">{productsList}</ul>
-       </div>
+      <h2 className="product__header">Music</h2>
+      <div>
+        <ul className="Product__container">{productsList}</ul>
+      </div>
     </section>
-</Fragment>
-)}
+  );
+};
 
 export default AvaiableProducts;
-

@@ -10,19 +10,12 @@ export default function Footer() {
         <h3 className="footer-title ">The Generics</h3>
         <div className="footericons">
           <ul>
-            <a
-              href="https://www.youtube.com/"
-              className="youtube social"
-            >
+            <a href="https://www.youtube.com/" className="youtube social">
               <FontAwesomeIcon icon={faYoutube} size="2x" />
             </a>
-            <a
-              href="https://www.facebook.com/"
-              className="facebook social"
-            >
+            <a href="https://www.facebook.com/" className="facebook social">
               <FontAwesomeIcon icon={faFacebook} size="2x" />
             </a>
-            
           </ul>
         </div>
       </div>
