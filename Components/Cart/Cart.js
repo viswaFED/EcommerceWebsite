@@ -38,7 +38,6 @@ import "./Cart.css";
 const Cart = (props) => {
   let cartTotal = 0;
   const cartCntxt = useContext(CartContext);
-  console.log(cartCntxt.items);
 
   const CartList = cartCntxt.items.map((List) => (
     <CartItems
@@ -63,14 +62,14 @@ const Cart = (props) => {
         X
       </button>
       <div className="cart-row cart-header">
-        <span class="cart-item cart-column">ITEM</span>
-        <span class="cart-price cart-column">PRICE</span>
-        <span class="cart-quantity cart-column">QUANTITY</span>
+        <span className="cart-item cart-column">ITEM</span>
+        <span className="cart-price cart-column">PRICE</span>
+        <span className="cart-quantity cart-column">QUANTITY</span>
       </div>
       <div>{CartList}</div>
-      <div class="cart-total">
+      <div className="Ctotal">
         <span>
-          <span class="total-title">
+          <span className="total-title">
             <strong style={{ fontFamily: "Times New Roman" }}>Total</strong>
           </span>
           <span id="total-value" className="total--value">
@@ -78,7 +77,7 @@ const Cart = (props) => {
           </span>
         </span>
       </div>
-      <button class="purchase-btn" type="button">
+      <button className="purchase-btn" type="button">
         PURCHASE
       </button>
     </div>

@@ -7,26 +7,17 @@ const Navbar = (props) => {
   cartCntxt.items.forEach((element) => {
     total += element.quantity;
   });
-  console.log(total);
 
   return (
     <header>
       <Nav>
         <NavMenu>
-          <NavLink to="/Home" activeStyle>
-            Home
-          </NavLink>
-          <NavLink to="/Store" activeStyle>
-            Store
-          </NavLink>
-          <NavLink to="/about" activeStyle>
-            About
-          </NavLink>
-          <NavLink to="/contact-us" activeStyle>
-            Contact Us
-          </NavLink>
+          <NavLink to="/Home">Home</NavLink>
+          <NavLink to="/Store">Store</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/contact-us">Contact Us</NavLink>
         </NavMenu>
-        <NavBtn onClick={props.Cart}>cart </NavBtn>
+        <NavBtn onClick={props.Cart}>cart ({total}) </NavBtn>
       </Nav>
       <NavGen>
         <h1 style={{ fontFamily: "Times New Roman" }}>The Generics</h1>

@@ -73,13 +73,13 @@
   margin-right: 20px;
 }
 
-.cart-total {
+.Ctotal {
   display: flex;
   flex-direction: row-reverse;
   font-size: 1.2rem;
   margin: 20px;
 }
-.cart-total .total-title {
+.Ctotal .total-title {
   margin-right: 10px;
   font-size: 1.5rem;
 }

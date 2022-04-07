@@ -1,19 +1,52 @@
 import React, { Fragment } from "react";
-
+import "./Contact.css";
 const Contact = () => {
   return (
     <Fragment>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "90vh",
-        }}
-      >
-        <h1>Contact</h1>
-      </div>
-    
+      <h1 style={{ fontFamily: "Times New Roman", textAlign: "center" }}>
+        Contact us
+      </h1>
+      <form className="container">
+        <div className="form">
+          <div className="formdetails">
+            <label>Name</label>
+            <input
+              type="text"
+              name="firstName"
+              placeholder="Joe"
+              tabIndex="1"
+            />
+          </div>
+          <br />
+          <div className="formdetails">
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+             
+              placeholder="example@corp.com"
+              tabIndex="2"
+            />
+          </div>
+          <div className="formdetails">
+            <label>Phone no</label>
+            <input type="number" 
+            placeholder="666666666"/>
+          </div>
+          <div className="">
+            <label className="msglabel">Message</label>
+            <textarea
+              placeholder="Message"
+              name="message"
+              className="msginput"
+            ></textarea>
+          </div>
+        </div>
+        <div className="">
+          <button className="button"> submit</button>
+        </div>
+      </form>
     </Fragment>
   );
 };

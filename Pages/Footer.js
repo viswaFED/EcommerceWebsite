@@ -6,7 +6,7 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <Fragment>
-      <div class="footer">
+      <div className="footer">
         <h3 className="footer-title ">The Generics</h3>
         <div className="footericons">
           <ul>
