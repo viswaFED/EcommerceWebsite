@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect, useCallback } from "react";
+import AddMovie from "../Components/Movies/AddMovies";
 import MoviesList from "../Components/Movies/MoviesList";
 import "./Index.css";
 
@@ -13,7 +14,7 @@ const Home = () => {
     try {
       const response = await fetch('https://swapi.dev/api/films/');
       if (!response.ok) {
-        throw new Error('Something went wrong!');
+        throw new Error('Something went wrong ....Retrying');
       }
 
       const data = await response.json();
@@ -37,6 +38,10 @@ const Home = () => {
     fetchMoviesHandler();
   }, [fetchMoviesHandler]);
 
+  
+  function addMovieHandler(movie) {
+    console.log(movie);
+  }
   let content = <p>Found no movies.</p>;
 
   if (movies.length > 0) {
@@ -53,6 +58,7 @@ const Home = () => {
 
   return (
     <Fragment>
+      <section><AddMovie onAddMovie={addMovieHandler}/></section>
       <section>
         <button onClick={fetchMoviesHandler}>Fetch Movies</button>
       </section>

@@ -49,7 +49,7 @@ const AvaiableProducts = () => {
   ));
 
   return (
-    <section>
+    <section >
       <h2 className="product__header">Music</h2>
       <div>
         <ul className="Product__container"> {productsList} </ul>

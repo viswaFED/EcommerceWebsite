@@ -1,21 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 
-.product {
-  padding: 15px;
-  margin: 10px;
+
+.product__header{
+  font-family: "Metal Mania";
   text-align: center;
-  font-weight: 1000;
+  padding: 20px;
+  font-size: 40px;
 }
 .Product__container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.Product__container div{
+  margin: 15px;
 }
+
 .product__title{
   text-align: center;
   padding: 15px;
@@ -42,12 +41,13 @@
   transform: scale(1.5);
 }
 .product__price{
-  margin: 10px 0;
+  display: flex;
+  margin: 8px;
+  align-items: center;
+  justify-content: space-between;
   
 }
-.product__price__text {
-  float: left;
-}
+
 
 .Product__button {
   float: right;
@@ -68,9 +68,3 @@
   border: none;
 }
 
-.product__header{
-    font-family: "Metal Mania";
-    text-align: center;
-    padding: 20px;
-    font-size: 40px;
-}

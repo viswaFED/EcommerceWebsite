@@ -1,5 +1,6 @@
 import React, { Fragment, useContext } from "react";
 import CartContext from "../Components/Cart/CartContext";
+import "./Product.css";
 
 const ProductList = (props) => {
   const cartCntxt = useContext(CartContext);
@@ -18,7 +19,7 @@ const ProductList = (props) => {
   const imgsrc = props.img;
   return (
     <Fragment>
-      <ul>
+      <ul className="" >
         <div className="product__title">
           <h4> {props.title} </h4>
         </div>

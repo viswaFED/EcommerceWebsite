@@ -14,7 +14,6 @@ const Contact = () => {
               type="text"
               name="firstName"
               placeholder="Joe"
-              tabIndex="1"
             />
           </div>
           <br />
@@ -24,9 +23,8 @@ const Contact = () => {
               type="email"
               name="email"
               id="email"
-             
               placeholder="example@corp.com"
-              tabIndex="2"
+             
             />
           </div>
           <div className="formdetails">
@@ -42,9 +40,9 @@ const Contact = () => {
               className="msginput"
             ></textarea>
           </div>
+        <div >
+          <button className="Contactbutton"> submit</button>
         </div>
-        <div className="">
-          <button className="button"> submit</button>
         </div>
       </form>
     </Fragment>

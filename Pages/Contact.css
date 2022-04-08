@@ -31,8 +31,8 @@
   max-width: 100%;
 }
 
-.button {
-  float: right;
+.Contactbutton {
+  float: left;
   color: white;
   display: flex;
   border-radius: 4px;
@@ -43,7 +43,7 @@
   text-decoration: none;
   border: none;
 }
-.button:hover{
+.Contactbutton:hover{
   transition: all 0.2s ease-in-out;
   background: rgb(56, 131, 150);
   color: white;
