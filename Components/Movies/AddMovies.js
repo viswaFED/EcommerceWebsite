@@ -9,6 +9,7 @@ function AddMovie(props) {
 
   function submitHandler(event) {
     event.preventDefault();
+    
     const movie = {
       title: titleRef.current.value,
       openingText: openingTextRef.current.value,

@@ -1,9 +1,9 @@
-section {
+.AddMovies {
   margin: 1rem auto;
   width: 90%;
   max-width: 40rem;
   text-align: center;
-  background-color: white;
+  background-color: rgb(87, 210, 231);
   padding: 2rem;
   border-radius: 12px;
 }
@@ -11,8 +11,8 @@ section {
 button {
   font: inherit;
   cursor: pointer;
-  background: #230052;
-  border: 1px solid #230052;
+  background: #b35842;
+  border: 1px solid #c44f32;
   color: white;
   padding: 0.75rem 2rem;
   border-radius: 20px;
@@ -24,8 +24,8 @@ button:focus {
 
 button:hover,
 button:active {
-  background-color: #460897;
-  border-color: #460897;
+  background-color: #c44f32;
+  border-color: #c44f32;
 }
 
 
